@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.multi-column {
+    column-count: 4;
+    column-gap: 15px;
+    column-rule: 2px solid #333;
+    text-align: justify;
+}

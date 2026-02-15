@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Prompt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 16px;
+            color: #c0c0c0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .window {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #000000;
+        }
+
+        .title-bar {
+            background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+            height: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            border-bottom: 1px solid #0a0a0a;
+        }
+
+        .title-icon {
+            width: 16px;
+            height: 16px;
+            background-color: #000000;
+            margin-right: 6px;
+            border: 1px solid #808080;
+        }
+
+        .title-text {
+            color: #000000;
+            font-size: 12px;
+            font-weight: 400;
+            flex: 1;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 2px;
+        }
+
+        .control-btn {
+            width: 21px;
+            height: 21px;
+            background: linear-gradient(to bottom, #ffffff 0%, #e1e1e1 100%);
+            border: 1px solid #adadad;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #000000;
+            cursor: pointer;
+        }
+
+        .terminal {
+            flex: 1;
+            background-color: #000000;
+            color: #c0c0c0;
+            padding: 10px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .prompt {
+            color: #c0c0c0;
+        }
+
+        .command {
+            color: #ffffff;
+        }
+
+        .output {
+            color: #c0c0c0;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: #c0c0c0;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-icon"></div>
+            <div class="title-text">Command Prompt - lex</div>
+            <div class="window-controls">
+                <div class="control-btn">_</div>
+                <div class="control-btn">□</div>
+                <div class="control-btn">×</div>
+            </div>
+        </div>
+        <div class="terminal">Microsoft Windows [Version 10.0.19045.3803]
+(c) Microsoft Corporation. All rights reserved.
+
+<span class="prompt">C:\Users\Student></span><span class="command">type abc.txt</span>
+This is a sample file
+word test word
+another line with word in it
+
+<span class="prompt">C:\Users\Student></span><span class="command">echo ===== PROGRAM 1: LINE COUNTER =====</span>
+===== PROGRAM 1: LINE COUNTER =====
+
+<span class="prompt">C:\Users\Student></span><span class="command">flex program1.l</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">gcc lex.yy.c -o program1.exe</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">program1.exe</span>
+
+Number of lines is 3
+<span class="prompt">C:\Users\Student></span><span class="command">echo.</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">echo ===== PROGRAM 2: HELLO PRINTER =====</span>
+===== PROGRAM 2: HELLO PRINTER =====
+
+<span class="prompt">C:\Users\Student></span><span class="command">flex program2.l</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">gcc lex.yy.c -o program2.exe</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">program2.exe</span>
+Hello
+Hello
+Hello
+
+<span class="prompt">C:\Users\Student></span><span class="command">echo.</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">echo ===== PROGRAM 3: WORD FINDER =====</span>
+===== PROGRAM 3: WORD FINDER =====
+
+<span class="prompt">C:\Users\Student></span><span class="command">flex program3.l</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">gcc lex.yy.c -o program3.exe</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">program3.exe</span>
+word found
+word found
+word found
+
+<span class="prompt">C:\Users\Student></span><span class="command">echo.</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">echo ===== PROGRAM 4: WORD COUNTER =====</span>
+===== PROGRAM 4: WORD COUNTER =====
+
+<span class="prompt">C:\Users\Student></span><span class="command">flex program4.l</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">gcc lex.yy.c -o program4.exe</span>
+
+<span class="prompt">C:\Users\Student></span><span class="command">program4.exe</span>
+
+Number of words is 11
+<span class="prompt">C:\Users\Student></span><span class="cursor"></span></div>
+    </div>
+</body>
+</html>
